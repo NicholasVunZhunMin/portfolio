@@ -1,0 +1,357 @@
+/* Reset 基本樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 網頁背景 & 字體 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    /* 暗黑底 */
+    color: #f5f5f5;
+    /* 亮文字 */
+    line-height: 1.6;
+}
+
+/* Header 區域 */
+.site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* 滿螢幕高度 */
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #2b2b2b);
+    /* 暗色漸層 */
+    border-bottom: 2px solid #333;
+    animation-fill-mode: initial;
+}
+
+/* Header 文字 */
+.header-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: #ff4c6d;
+    /* 亮粉紅，酷感 emo */
+    text-shadow: 2px 2px 4px #000;
+    /* 微微立體感 */
+}
+
+.header-content .tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ccc;
+    /* 副標淡灰 */
+    font-style: italic;
+}
+
+/* 響應式文字調整 */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 3rem;
+    }
+
+    .header-content .tagline {
+        font-size: 1.2rem;
+    }
+}
+
+/* 照片區域 */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    /* 上下間距 */
+    background-color: #121212;
+    /* 保持暗黑底色一致 */
+}
+
+.photo-container {
+    display: flex;
+    gap: 20px;
+    /* 三張照片之間間距 */
+}
+
+.photo-container img {
+    width: 200px;
+    /* 固定寬度 */
+    height: 200px;
+    /* 固定高度 1:1 */
+    object-fit: cover;
+    /* 保持比例裁切 */
+    border-radius: 10px;
+    /* 圓角 */
+    border: 2px solid #333;
+    /* 小邊框更有質感 */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* 懸停效果 */
+}
+
+/* 懸停效果 */
+.photo-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 76, 109, 0.5);
+    /* 粉色光暈 */
+}
+
+/* 響應式 */
+@media (max-width: 768px) {
+    .photo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-container img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+}
+
+/* 關於我區塊 */
+.about-me {
+    background-color: #1a1a1a;
+    /* 深色背景 */
+    color: #f5f5f5;
+    /* 文字顏色 */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-me h2 {
+    font-size: 3rem;
+    color: #ff4c6d;
+    /* 強調標題顏色 */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.about-container h3 {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.about-container p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* 基本資訊分欄顯示 */
+.basic-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.basic-info p {
+    font-size: 1.1rem;
+}
+
+/* 響應式 */
+@media (max-width: 768px) {
+    .about-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .basic-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* 技能區塊 */
+.skills {
+    background-color: #121212;
+    color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills-container h2 {
+    font-size: 3rem;
+    color: #ff4c6d;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.skills-container h3 {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* 專業技能進度條 */
+.skill {
+    margin-bottom: 20px;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill span {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #ff4c6d;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* 個人能力 */
+.personal-skills p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* 響應式 */
+@media (max-width: 768px) {
+    .skills-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .skills-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .skill {
+        max-width: 90%;
+    }
+}
+
+/* 經歷 / 成就區塊 */
+.experience {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.experience-container h2 {
+    font-size: 3rem;
+    color: #ff4c6d;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.experience-container h3 {
+    font-size: 1.8rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* 教育背景 & 工作經歷 */
+.education p,
+.work-experience ul {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* 工作經歷列表樣式 */
+.work-experience ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.work-experience li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.work-experience li::before {
+    content: '•';
+    color: #ff4c6d;
+    position: absolute;
+    left: 0;
+}
+
+/* 響應式 */
+@media (max-width: 768px) {
+    .experience-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .experience-container h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* 聯絡方式區塊 */
+.contact {
+    background-color: #121212;
+    color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 3rem;
+    color: #ff4c6d;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* 聯絡資訊文字 */
+.contact-container p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* 超連結樣式 */
+.contact-container a {
+    color: #ff4c6d;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.contact-container a:hover {
+    color: #ff85a2;
+    transform: scale(1.1);
+}
+
+.site-footer {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid #333;
+}
+
+.site-footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.site-footer p:first-child {
+    color: #ff4c6d;
+    /* 強調格言 */
+    font-style: italic;
+}
