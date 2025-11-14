@@ -89,7 +89,7 @@ export default function AItest({
   return (
     <div style={styles.wrap}>
       <div style={styles.card}>
-        <div style={styles.header}>ur best bro（直連 SDK，白色玄幻風）</div>
+        <div style={styles.header}>ur best bro</div>
 
         <div style={styles.controls}>
           <label style={styles.label}>
